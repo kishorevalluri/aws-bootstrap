@@ -42,3 +42,4 @@ if [ $? -eq 0 ]; then
   aws cloudformation list-exports \
     --query "Exports[?Name=='InstanceEndpoint'].Value" 
 fi
+
