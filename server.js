@@ -1,6 +1,6 @@
 const { hostname } = require('os');
 const http = require('http');
-const message = 'Hello Cloud\n';
+const message = `Hello World from ${hostname()}\n`;
 const port = 8080;
 
 const server = http.createServer((req, res) => {
@@ -10,5 +10,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () =>
-  console.log(`Server running at http://${hostname}:${port}`)
+  console.log(`Server running at http://${hostname()}:${port}`)
 );
